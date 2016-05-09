@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FragmentManager fTrans = getSupportFragmentManager();
     Calculator calculator = new Calculator();
+    MediaPlayer mPlayerstart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         setTitle(" Calculator ");
         Context context = getApplicationContext();
+        mPlayerstart = MediaPlayer.create(context, R.raw.welcome);
+        mPlayerstart.start();
         Intent notificationIntent = new Intent();
         PendingIntent contentIntent = PendingIntent.getActivity(context,
                 0, notificationIntent,
@@ -51,13 +55,13 @@ public class MainActivity extends AppCompatActivity
                 .getSystemService(Context.NOTIFICATION_SERVICE);
         Resources res = context.getResources();
         Notification.Builder builder = new Notification.Builder(context);
-        Uri ringURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+       // Uri ringURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         long[] vibrate = new long[] { 1000, 1000, 1000, 1000 };
         builder.setContentIntent(contentIntent)
                 .setTicker(" OKEY LETS GO!!! ")
                 .setSmallIcon(R.drawable.maths)
                 .setWhen(System.currentTimeMillis())
-                .setSound(ringURI)
+              //  .setSound(ringURI)
                 .setVibrate(vibrate)
                 .setContentTitle(" Notification ")
                 .setContentText(" Timer was started!");
