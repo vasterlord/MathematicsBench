@@ -32,7 +32,8 @@
         android:layout_gravity="right|top"
         android:layout_marginTop="62dp"
         android:layout_marginRight="40dp"
-        android:hint="Enter a" />
+        android:hint="Enter a"
+        android:numeric="signed|integer|decimal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,7 +61,8 @@
         android:layout_toEndOf="@+id/textView"
         android:layout_gravity="right|top"
         android:layout_marginTop="127dp"
-        android:layout_marginRight="40dp" />
+        android:layout_marginRight="40dp"
+        android:numeric="signed|integer|decimal" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,7 +90,8 @@
         android:layout_toEndOf="@+id/textView"
         android:layout_gravity="right|top"
         android:layout_marginTop="187dp"
-        android:layout_marginRight="40dp" />
+        android:layout_marginRight="40dp"
+        android:numeric="signed|integer|decimal" />
 
     <TextView
         android:layout_width="wrap_content"
