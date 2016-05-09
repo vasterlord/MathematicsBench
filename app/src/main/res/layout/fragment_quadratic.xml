@@ -106,13 +106,14 @@
         android:textSize="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="40dp"
+        android:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="X1 = "
+        android:text="X2 = "
         android:id="@+id/txtX2"
         android:layout_gravity="left|center_vertical"
         android:layout_alignBottom="@+id/editText"
@@ -121,7 +122,8 @@
         android:textSize="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="135dp"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginBottom="0dp"
+        android:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"

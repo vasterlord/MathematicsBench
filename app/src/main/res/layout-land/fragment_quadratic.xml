@@ -128,13 +128,14 @@
         android:textSize="30dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="40dp"
-        android:layout_marginRight="150dp" />
+        android:layout_marginRight="150dp"
+        android:visibility="visible" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="X1 = "
+        android:text="X2 = "
         android:id="@+id/txtX2"
         android:layout_gravity="right|center_vertical"
         android:layout_alignBottom="@+id/editText"
@@ -144,5 +145,6 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="0dp"
-        android:layout_marginRight="150dp" />
+        android:layout_marginRight="150dp"
+        android:visibility="visible" />
 </FrameLayout>
