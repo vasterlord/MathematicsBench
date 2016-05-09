@@ -233,7 +233,7 @@
                  android:layout_width="match_parent"
                  android:layout_height="match_parent"
                  android:textAppearance="?android:attr/textAppearanceLarge"
-                 android:textColor="#61d0fc"
+                 android:textColor="#0090ff"
                  android:enabled="true"
                  android:editable="false"
                  android:background="#f9f5a1" />

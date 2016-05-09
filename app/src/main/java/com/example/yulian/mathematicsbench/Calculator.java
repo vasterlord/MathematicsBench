@@ -115,6 +115,7 @@ public class Calculator extends Fragment {
         buttonPi  = (Button) v.findViewById(R.id.buttonPi);
         buttonDev  = (Button) v.findViewById(R.id.buttonDev);
         buttonM  = (Button) v.findViewById(R.id.buttonM);
+        buttonFact  = (Button) v.findViewById(R.id.buttonFact);
         edt1 = (EditText) v.findViewById(R.id.edt1);
         eTLaps = (EditText) v.findViewById(R.id.et_laps);
         mSVLaps = (ScrollView) v.findViewById(R.id.sv_laps);
