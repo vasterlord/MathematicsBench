@@ -108,13 +108,13 @@ public class MainActivity extends AppCompatActivity
             // Uri ringURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             long[] vibrate = new long[] { 1000, 1000, 1000, 1000 };
             builder.setContentIntent(contentIntent)
-                    .setTicker(" OKEY LETS GO!!! ")
+                    .setTicker(" Welcome! ;) ")
                     .setSmallIcon(R.drawable.mathb)
                     .setWhen(System.currentTimeMillis())
                     //  .setSound(ringURI)
                     .setVibrate(vibrate)
                     .setContentTitle(" Notification ")
-                    .setContentText(" Timer was started!");
+                    .setContentText(" You chose calculator");
             Notification notification = builder.build();
             notification.defaults = Notification.DEFAULT_SOUND |
                     Notification.DEFAULT_VIBRATE;
@@ -125,7 +125,34 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_square)
         {
-
+            Context context = getApplicationContext();
+            mPlayerstart = MediaPlayer.create(context, R.raw.welcome);
+            mPlayerstart.start();
+            Intent notificationIntent = new Intent();
+            PendingIntent contentIntent = PendingIntent.getActivity(context,
+                    0, notificationIntent,
+                    PendingIntent.FLAG_CANCEL_CURRENT);
+            NotificationManager nm = (NotificationManager) context
+                    .getSystemService(Context.NOTIFICATION_SERVICE);
+            Resources res = context.getResources();
+            Notification.Builder builder = new Notification.Builder(context);
+            // Uri ringURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            long[] vibrate = new long[] { 1000, 1000, 1000, 1000 };
+            builder.setContentIntent(contentIntent)
+                    .setTicker(" Welcome! ;) ")
+                    .setSmallIcon(R.drawable.mathb)
+                    .setWhen(System.currentTimeMillis())
+                    //  .setSound(ringURI)
+                    .setVibrate(vibrate)
+                    .setContentTitle(" Notification ")
+                    .setContentText(" You chose quadratic equation");
+            Notification notification = builder.build();
+            notification.defaults = Notification.DEFAULT_SOUND |
+                    Notification.DEFAULT_VIBRATE;
+            notification.flags = notification.flags | Notification.FLAG_SHOW_LIGHTS;
+            notification.flags = notification.flags | Notification.FLAG_INSISTENT;
+            Notification n = builder.getNotification();
+            nm.notify(1, n);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

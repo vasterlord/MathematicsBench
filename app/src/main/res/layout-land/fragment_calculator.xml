@@ -88,7 +88,7 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="4"
-         android:id="@+id/button12"
+         android:id="@+id/button4"
          android:layout_below="@+id/edt1"
          android:layout_toRightOf="@+id/edt1"
          android:layout_toEndOf="@+id/edt1" />
@@ -98,8 +98,8 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="5"
-         android:id="@+id/button13"
-         android:layout_alignTop="@+id/button12"
+         android:id="@+id/button5"
+         android:layout_alignTop="@+id/button4"
          android:layout_alignLeft="@+id/button2"
          android:layout_alignStart="@+id/button2" />
 
@@ -108,8 +108,8 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="6"
-         android:id="@+id/button14"
-         android:layout_alignBottom="@+id/button13"
+         android:id="@+id/button6"
+         android:layout_alignBottom="@+id/button5"
          android:layout_toRightOf="@+id/button2"
          android:layout_toEndOf="@+id/button2" />
 
@@ -118,7 +118,7 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="7"
-         android:id="@+id/button15"
+         android:id="@+id/button7"
          android:layout_centerVertical="true"
          android:layout_toRightOf="@+id/linearLayout"
          android:layout_toEndOf="@+id/linearLayout" />
@@ -128,29 +128,29 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="8"
-         android:id="@+id/button16"
-         android:layout_alignTop="@+id/button15"
-         android:layout_alignLeft="@+id/button13"
-         android:layout_alignStart="@+id/button13" />
+         android:id="@+id/button8"
+         android:layout_alignTop="@+id/button7"
+         android:layout_alignLeft="@+id/button5"
+         android:layout_alignStart="@+id/button5" />
 
      <Button
          style="?android:attr/buttonStyleSmall"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="9"
-         android:id="@+id/button17"
-         android:layout_alignBottom="@+id/button16"
-         android:layout_alignLeft="@+id/button14"
-         android:layout_alignStart="@+id/button14" />
+         android:id="@+id/button9"
+         android:layout_alignBottom="@+id/button8"
+         android:layout_alignLeft="@+id/button6"
+         android:layout_alignStart="@+id/button6" />
 
      <Button
          style="?android:attr/buttonStyleSmall"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="0"
-         android:id="@+id/button19"
-         android:layout_alignLeft="@+id/button16"
-         android:layout_alignStart="@+id/button16"
+         android:id="@+id/button0"
+         android:layout_alignLeft="@+id/button8"
+         android:layout_alignStart="@+id/button8"
          android:layout_below="@+id/linearLayout" />
 
      <Button
@@ -158,21 +158,21 @@
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="C"
-         android:id="@+id/button20"
-         android:layout_alignBottom="@+id/button19"
-         android:layout_alignLeft="@+id/button17"
-         android:layout_alignStart="@+id/button17"
-         android:layout_alignTop="@+id/button19" />
+         android:id="@+id/buttonC"
+         android:layout_alignBottom="@+id/button0"
+         android:layout_alignLeft="@+id/button9"
+         android:layout_alignStart="@+id/button9"
+         android:layout_alignTop="@+id/button0" />
 
      <Button
          style="?android:attr/buttonStyleSmall"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:text="."
-         android:id="@+id/button18"
+         android:id="@+id/buttonPoint"
          android:layout_below="@+id/linearLayout"
-         android:layout_toLeftOf="@+id/button16"
-         android:layout_toStartOf="@+id/button16" />
+         android:layout_toLeftOf="@+id/button8"
+         android:layout_toStartOf="@+id/button8" />
 
      <Button
          style="?android:attr/buttonStyleSmall"
@@ -221,10 +221,10 @@
          android:text="="
          android:id="@+id/buttoneql"
          android:layout_alignBottom="@+id/buttonCtg"
-         android:layout_alignLeft="@+id/button18"
-         android:layout_alignStart="@+id/button18"
-         android:layout_alignRight="@+id/button20"
-         android:layout_alignEnd="@+id/button20" />
+         android:layout_alignLeft="@+id/buttonPoint"
+         android:layout_alignStart="@+id/buttonPoint"
+         android:layout_alignRight="@+id/buttonC"
+         android:layout_alignEnd="@+id/buttonC" />
 
      <Button
          style="?android:attr/buttonStyleSmall"
@@ -232,8 +232,8 @@
          android:layout_height="wrap_content"
          android:text="CE"
          android:id="@+id/buttonCE"
-         android:layout_toLeftOf="@+id/button18"
-         android:layout_toStartOf="@+id/button18"
+         android:layout_toLeftOf="@+id/buttonPoint"
+         android:layout_toStartOf="@+id/buttonPoint"
          android:layout_alignTop="@+id/buttoneql" />
 
      <Button
@@ -262,7 +262,7 @@
          android:layout_height="wrap_content"
          android:text="log"
          android:id="@+id/buttonLog"
-         android:layout_alignBottom="@+id/button14"
+         android:layout_alignBottom="@+id/button6"
          android:layout_alignLeft="@+id/buttonSqr"
          android:layout_alignStart="@+id/buttonSqr" />
 
@@ -282,7 +282,7 @@
          android:layout_height="wrap_content"
          android:text="exp"
          android:id="@+id/buttonExp"
-         android:layout_alignTop="@+id/button17"
+         android:layout_alignTop="@+id/button9"
          android:layout_alignLeft="@+id/buttonLog"
          android:layout_alignStart="@+id/buttonLog" />
 
@@ -314,7 +314,7 @@
          android:id="@+id/buttonDev"
          android:layout_alignLeft="@+id/buttonExp"
          android:layout_alignStart="@+id/buttonExp"
-         android:layout_alignBottom="@+id/button20" />
+         android:layout_alignBottom="@+id/buttonC" />
 
      <Button
          style="?android:attr/buttonStyleSmall"
@@ -338,6 +338,52 @@
          android:layout_alignStart="@+id/buttonDev"
          android:layout_alignRight="@+id/buttonLn"
          android:layout_alignEnd="@+id/buttonLn" />
+
+      <Button
+          style="?android:attr/buttonStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="+"
+          android:id="@+id/buttonadd"
+          android:layout_below="@+id/linearLayout"
+          android:layout_alignLeft="@+id/buttonCos"
+          android:layout_alignStart="@+id/buttonCos"
+          android:layout_toLeftOf="@+id/buttonTan"
+          android:layout_toStartOf="@+id/buttonTan" />
+
+      <Button
+          style="?android:attr/buttonStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="-"
+          android:id="@+id/buttonsub"
+          android:layout_below="@+id/linearLayout"
+          android:layout_toRightOf="@+id/buttonCos"
+          android:layout_alignStart="@+id/buttonTan"
+          android:layout_toStartOf="@+id/buttonCtg" />
+
+      <Button
+          style="?android:attr/buttonStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="*"
+          android:id="@+id/buttonmul"
+          android:layout_alignTop="@+id/button0"
+          android:layout_toRightOf="@+id/buttonsub"
+          android:layout_toStartOf="@+id/buttonCE"
+          android:layout_toLeftOf="@+id/buttonCE"
+          android:layout_alignStart="@+id/buttonCtg" />
+
+      <Button
+          style="?android:attr/buttonStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="/"
+          android:id="@+id/buttondiv"
+          android:layout_alignBottom="@+id/button0"
+          android:layout_alignLeft="@+id/buttonCE"
+          android:layout_alignStart="@+id/buttonCE"
+          android:layout_toStartOf="@+id/buttoneql" />
 
  </RelativeLayout>
 
