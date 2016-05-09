@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Navigation">
+        <menu>
+            <item
+                android:id="@+id/nav_calc"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Calculator" />
+            <item
+                android:id="@+id/nav_square"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Quadratic equation" />
+        </menu>
+    </item>
+
+</menu>
