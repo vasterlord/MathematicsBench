@@ -243,7 +243,7 @@ public class Calculator extends Fragment {
     public void onClick(View v) {
         mValueOne = Double.parseDouble(edt1.getText().toString());
         mValueTwo =  Math.sin(Double.parseDouble(edt1.getText().toString()));
-        mValueTwo =  Math.toDegrees(mValueTwo);
+       // mValueTwo =  Math.toDegrees(mValueTwo);
         edt1.setText(mValueTwo + "");
         eTLaps.append("sin(" + String.valueOf(mValueOne)+ ")" + " " + "="  + " " +
                 String.valueOf(edt1.getText()) + "\n");

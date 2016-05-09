@@ -46,34 +46,7 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         setTitle(" Calculator ");
-        Context context = getApplicationContext();
-        mPlayerstart = MediaPlayer.create(context, R.raw.welcome);
-        mPlayerstart.start();
-        Intent notificationIntent = new Intent();
-        PendingIntent contentIntent = PendingIntent.getActivity(context,
-                0, notificationIntent,
-                PendingIntent.FLAG_CANCEL_CURRENT);
-        NotificationManager nm = (NotificationManager) context
-                .getSystemService(Context.NOTIFICATION_SERVICE);
-        Resources res = context.getResources();
-        Notification.Builder builder = new Notification.Builder(context);
-       // Uri ringURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        long[] vibrate = new long[] { 1000, 1000, 1000, 1000 };
-        builder.setContentIntent(contentIntent)
-                .setTicker(" OKEY LETS GO!!! ")
-                .setSmallIcon(R.drawable.mathb)
-                .setWhen(System.currentTimeMillis())
-              //  .setSound(ringURI)
-                .setVibrate(vibrate)
-                .setContentTitle(" Notification ")
-                .setContentText(" Timer was started!");
-        Notification notification = builder.build();
-        notification.defaults = Notification.DEFAULT_SOUND |
-                Notification.DEFAULT_VIBRATE;
-        notification.flags = notification.flags | Notification.FLAG_SHOW_LIGHTS;
-        notification.flags = notification.flags | Notification.FLAG_INSISTENT;
-        Notification n = builder.getNotification();
-        nm.notify(1, n);
+
         fTrans.beginTransaction()
                 .replace(R.id.fragreplace, calculator).commit();
     }
@@ -121,6 +94,34 @@ public class MainActivity extends AppCompatActivity
         {
             fTrans.beginTransaction()
                     .replace(R.id.fragreplace, calculator).commit();
+            Context context = getApplicationContext();
+            mPlayerstart = MediaPlayer.create(context, R.raw.welcome);
+            mPlayerstart.start();
+            Intent notificationIntent = new Intent();
+            PendingIntent contentIntent = PendingIntent.getActivity(context,
+                    0, notificationIntent,
+                    PendingIntent.FLAG_CANCEL_CURRENT);
+            NotificationManager nm = (NotificationManager) context
+                    .getSystemService(Context.NOTIFICATION_SERVICE);
+            Resources res = context.getResources();
+            Notification.Builder builder = new Notification.Builder(context);
+            // Uri ringURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            long[] vibrate = new long[] { 1000, 1000, 1000, 1000 };
+            builder.setContentIntent(contentIntent)
+                    .setTicker(" OKEY LETS GO!!! ")
+                    .setSmallIcon(R.drawable.mathb)
+                    .setWhen(System.currentTimeMillis())
+                    //  .setSound(ringURI)
+                    .setVibrate(vibrate)
+                    .setContentTitle(" Notification ")
+                    .setContentText(" Timer was started!");
+            Notification notification = builder.build();
+            notification.defaults = Notification.DEFAULT_SOUND |
+                    Notification.DEFAULT_VIBRATE;
+            notification.flags = notification.flags | Notification.FLAG_SHOW_LIGHTS;
+            notification.flags = notification.flags | Notification.FLAG_INSISTENT;
+            Notification n = builder.getNotification();
+            nm.notify(1, n);
         }
         else if (id == R.id.nav_square)
         {
