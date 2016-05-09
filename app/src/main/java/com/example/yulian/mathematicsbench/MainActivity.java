@@ -23,12 +23,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import com.example.yulian.mathematicsbench.Calculator;
+import com.example.yulian.mathematicsbench.QuadraticFragment;
 import com.example.yulian.mathematicsbench.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     FragmentManager fTrans = getSupportFragmentManager();
     Calculator calculator = new Calculator();
+    QuadraticFragment quadraticFragment = new QuadraticFragment();
     MediaPlayer mPlayerstart;
 
 
@@ -127,6 +129,8 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.nav_square)
         {
             setTitle(" Quadratic equation ");
+            fTrans.beginTransaction()
+                    .replace(R.id.fragreplace, quadraticFragment).commit();
             Context context1 = getApplicationContext();
             mPlayerstart = MediaPlayer.create(context1, R.raw.welcome);
             mPlayerstart.start();
