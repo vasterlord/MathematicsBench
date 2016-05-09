@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         long[] vibrate = new long[] { 1000, 1000, 1000, 1000 };
         builder.setContentIntent(contentIntent)
                 .setTicker(" OKEY LETS GO!!! ")
-                .setSmallIcon(R.drawable.maths)
+                .setSmallIcon(R.drawable.mathb)
                 .setWhen(System.currentTimeMillis())
               //  .setSound(ringURI)
                 .setVibrate(vibrate)
