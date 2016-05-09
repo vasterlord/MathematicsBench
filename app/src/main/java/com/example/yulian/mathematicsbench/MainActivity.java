@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
     FragmentManager fTrans = getSupportFragmentManager();
     Calculator calculator = new Calculator();
     QuadraticFragment quadraticFragment = new QuadraticFragment();
-    MediaPlayer mPlayerstart;
+    MediaPlayer mPlayerstart, mPlayerstart1;
 
 
     @Override
@@ -132,8 +132,8 @@ public class MainActivity extends AppCompatActivity
             fTrans.beginTransaction()
                     .replace(R.id.fragreplace, quadraticFragment).commit();
             Context context1 = getApplicationContext();
-            mPlayerstart = MediaPlayer.create(context1, R.raw.welcome);
-            mPlayerstart.start();
+            mPlayerstart1 = MediaPlayer.create(context1, R.raw.welcome);
+            mPlayerstart1.start();
             Intent notificationIntent = new Intent();
             PendingIntent contentIntent1 = PendingIntent.getActivity(context1,
                     0, notificationIntent,
