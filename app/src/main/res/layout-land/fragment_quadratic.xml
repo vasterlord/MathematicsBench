@@ -31,7 +31,7 @@
         android:layout_toEndOf="@+id/textView"
         android:layout_gravity="right|top"
         android:layout_marginTop="62dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginRight="250dp"
         android:hint="Enter a" />
 
     <TextView
@@ -60,7 +60,7 @@
         android:layout_toEndOf="@+id/textView"
         android:layout_gravity="right|top"
         android:layout_marginTop="127dp"
-        android:layout_marginRight="40dp" />
+        android:layout_marginRight="250dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,37 +88,7 @@
         android:layout_toEndOf="@+id/textView"
         android:layout_gravity="right|top"
         android:layout_marginTop="187dp"
-        android:layout_marginRight="40dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="X1 = "
-        android:id="@+id/txtX1"
-        android:layout_gravity="left|center_vertical"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="40dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="X1 = "
-        android:id="@+id/txtX2"
-        android:layout_gravity="left|center_vertical"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="135dp"
-        android:layout_marginBottom="0dp" />
+        android:layout_marginRight="250dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -144,4 +114,35 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="10dp"
         style="?android:attr/buttonStyleSmall" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="X1 = "
+        android:id="@+id/txtX1"
+        android:layout_gravity="right|center_vertical"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="150dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="X1 = "
+        android:id="@+id/txtX2"
+        android:layout_gravity="right|center_vertical"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="150dp" />
 </FrameLayout>
