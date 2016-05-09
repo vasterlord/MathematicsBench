@@ -1,5 +1,7 @@
 package com.example.yulian.mathematicsbench;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -33,6 +35,9 @@ public class Calculator extends Fragment {
     double mValueOne , mValueTwo ;
 
     boolean mAddition , mSubtract ,mMultiplication ,mDivision ;
+    private String PREF_NAME = "pref";
+    private String PREF_NAME2 = "pref2";
+    SharedPreferences sharedPreferences,sharedPreferences2;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -332,7 +337,44 @@ public class Calculator extends Fragment {
 
         return v;
     }
+    private void savePref(String sRes, String sRes2){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences.Editor editor2 = sharedPreferences2.edit();
+        editor.putString(PREF_NAME, sRes);
+        editor.apply();
+        editor2.putString(PREF_NAME2, sRes2);
+        editor2.apply();
+    }
 
+    private String loadPref(){
+        sharedPreferences = getActivity().getSharedPreferences(PREF_NAME , Context.MODE_PRIVATE);
+        String saveText = sharedPreferences.getString(PREF_NAME, "");
+        return saveText;
+    }
+    private String loadPref2(){
+        sharedPreferences2 = getActivity().getSharedPreferences(PREF_NAME2 , Context.MODE_PRIVATE);
+        String saveText2 = sharedPreferences2.getString(PREF_NAME2, "");
+        return saveText2;
+    }
+
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        savePref((edt1.getText().toString()),(eTLaps.getText().toString()));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        savePref((edt1.getText().toString()),(eTLaps.getText().toString()));
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        edt1.setText(loadPref());
+        eTLaps.setText(loadPref2());
+    }
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
         if (mListener != null) {
