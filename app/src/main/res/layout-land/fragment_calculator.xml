@@ -331,7 +331,7 @@
          style="?android:attr/buttonStyleSmall"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:text="x^1/2"
+         android:text="x^0.5"
          android:id="@+id/buttonRoot"
          android:layout_alignTop="@+id/buttoneql"
          android:layout_alignLeft="@+id/buttonDev"
@@ -359,8 +359,7 @@
           android:id="@+id/buttonsub"
           android:layout_below="@+id/linearLayout"
           android:layout_toRightOf="@+id/buttonCos"
-          android:layout_alignStart="@+id/buttonTan"
-          android:layout_toStartOf="@+id/buttonCtg" />
+          android:layout_toEndOf="@+id/buttonCos" />
 
       <Button
           style="?android:attr/buttonStyleSmall"

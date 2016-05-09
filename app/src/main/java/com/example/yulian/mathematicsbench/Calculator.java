@@ -34,7 +34,7 @@ public class Calculator extends Fragment {
 
     double mValueOne , mValueTwo ;
 
-    boolean mAddition , mSubtract ,mMultiplication ,mDivision ;
+    boolean mAddition , mSubtract ,mMultiplication ,mDivision, mPow;
     private String PREF_NAME = "pref";
     private String PREF_NAME2 = "pref2";
     SharedPreferences sharedPreferences,sharedPreferences2;
@@ -190,6 +190,12 @@ public class Calculator extends Fragment {
                 edt1.setText(edt1.getText()+"0");
             }
         });
+        buttonPi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edt1.setText(String.valueOf(Math.PI));
+            }
+        });
 
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -242,9 +248,8 @@ public class Calculator extends Fragment {
         buttonSin.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        mValueOne = Double.parseDouble(edt1.getText().toString());
+        mValueOne =  Double.parseDouble(edt1.getText().toString());
         mValueTwo =  Math.sin(Double.parseDouble(edt1.getText().toString()));
-       // mValueTwo =  Math.toDegrees(mValueTwo);
         edt1.setText(mValueTwo + "");
         eTLaps.append("sin(" + String.valueOf(mValueOne)+ ")" + " " + "="  + " " +
                 String.valueOf(edt1.getText()) + "\n");
@@ -257,11 +262,230 @@ public class Calculator extends Fragment {
         });
     }
 });
+        buttonCos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.cos(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("cos(" + String.valueOf(mValueOne)+ ")" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonTan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.tan(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("tan(" + String.valueOf(mValueOne)+ ")" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonCtg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.cos(Double.parseDouble(edt1.getText().toString()))/Math.sin(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("ctg(" + String.valueOf(mValueOne)+ ")" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonSqr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  (Double.parseDouble(edt1.getText().toString()))*(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("x^2" + String.valueOf(mValueOne) + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonPow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                mValueOne = Double.parseDouble(edt1.getText()+"");
+                mPow = true ;
+                edt1.setText(null);
+            }
+        });
+
+        buttonExp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.exp(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("e^" + String.valueOf(mValueOne) + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonLog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.log(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("log(" + String.valueOf(mValueOne) + ")" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonLn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.log10(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("ln(" + String.valueOf(mValueOne) + ")" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonFact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               int mValueOne1 = Integer.parseInt(edt1.getText().toString());
+                int mValueTwo1 = Integer.parseInt(edt1.getText().toString());
+                int factorial = 1;
+                int i = 1;
+                while (i <= mValueTwo1) {
+                    factorial = factorial * i;
+                    i++;
+                }
+                edt1.setText(factorial + "");
+                eTLaps.append(String.valueOf(mValueOne) + "!" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+
+        buttonDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  1/(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("1/" + String.valueOf(mValueOne) + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+
+        buttonM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.abs(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append("|" + String.valueOf(mValueOne) + "|" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
+        buttonRoot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mValueOne =  Double.parseDouble(edt1.getText().toString());
+                mValueTwo =  Math.sqrt(Double.parseDouble(edt1.getText().toString()));
+                edt1.setText(mValueTwo + "");
+                eTLaps.append(String.valueOf(mValueOne) + "^0.5" + " " + "="  + " " +
+                        String.valueOf(edt1.getText()) + "\n");
+
+                mSVLaps.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                    }
+                });
+            }
+        });
         buttonEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mValueTwo = Double.parseDouble(edt1.getText() + "");
 
+                if (mPow == true){
+
+                    edt1.setText(Math.pow(mValueOne, mValueTwo) +"");
+                    mAddition=false;
+                    eTLaps.append(String.valueOf(mValueOne) + "^" + String.valueOf(mValueTwo) + " " + "=" +
+                            String.valueOf(edt1.getText()) + "\n");
+
+                    mSVLaps.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            mSVLaps.smoothScrollTo(0, eTLaps.getBottom());
+                        }
+                    });
+                }
                 if (mAddition == true){
 
                     edt1.setText(mValueOne + mValueTwo +"");
